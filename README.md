@@ -1,11 +1,29 @@
 # Engenharia de Software 3 - Design Patterns Facade
-### Um programador recebeu a incumbência de criar uma classe representando uma “fila de impressão” conforme o diagrama de classe abaixo:
+<p>Usando as classes abaixo como modelo, implemente uma classe “Combo” seguindo o design pattern “Facade”. A classe implementada por você deverá ter um método que permita facilmente a criação de “combos” que incluam um sanduiche (burguer), uma sobremesa e bebida do “combo”. Deverá também ter um método para mostrar quais são os itens do “combo”. Se julgar necessário crie outras classes auxiliares.</p>
 
-![Imagem da atividade proposta pelo professor](https://github.com/matheusromeiro/Design_Patterns_Facade/assets/65318621/e1fc78ef-37e5-48a9-add2-3b5fc0f83d81)
+![image](https://github.com/matheusromeiro/Design_Patterns_Facade/assets/65318621/d1d1087d-1b54-44a2-a33c-32bd7054ce99)
 
-### Ao implementar esse deparou com um problema: só pode haver apenas uma fila de impressão. Qualquer parte do sistema que fizer envio de documentos deve usar a mesma “fila”.
-<p>Com base no texto responda as perguntas abaixo e faça a atividade proposta: </p>
-<p>1. Qual “Design Pattern” deveria ser usado para resolver este problema?</p>
-<p>2. Qual propósito deste Pattern?</p>
-<p>3. O que é “lazy initialization”?</p>
-<p>4. Implemente a classe descrita no diagrama usando o “pattern” identificado no item “1”. Certifique-se que apenas uma instância da classe “Fila” pode ser criada. Esta classe deve ser preferencialmente implementada em Java mas podem ser usadas outras linguagens orientadas a objeto de sua preferência. Sua versão desta classe deve ser colocada em um repositório publico do GitHub cujo o link deve ser submetido como resposta desta atividade.</p>
+### Para testar a sua implementação utilize o código abaixo:
+
+```
+import java.util.Scanner; 
+ 
+public class Main { 
+    public static void main(String[] args) { 
+        System.out.println("Selecione seu combo"); 
+        System.out.println("1. Combo Master"); 
+        System.out.println("2. Super Combo"); 
+        System.out.print("Sua escolha: "); 
+ 
+        Scanner input = new Scanner(System.in); 
+ 
+        int tipo = input.nextInt(); 
+        Combo combo = new Combo(); 
+        combo.CriarCombo(tipo); 
+        System.out.println(combo); 
+    } 
+} 
+```
+
+### O QUE VOCÊ DEVE ENTREGAR
+<p>Como resposta a esta tarefa você deve fornecer um link para um repositório público no GitHub criado por você, que contenha a sua implementação para resolução do problema proposto.</p>
